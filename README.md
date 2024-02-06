@@ -21,11 +21,13 @@ With that, I could access the Load Balancer IP, and I was redirected to the DVWA
 
 The files in this repository were used to configure the network depicted below.
 
-ELK Coud Diagram.png
+#### ELK Coud Diagram
+![ELK Coud Diagram](https://github.com/cyberAngel9/ELK-Stack-Project/assets/82012925/db3404ae-9512-4d0e-ba2a-407282b56019)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the **playbook** file may be used to install only certain pieces of it, such as Filebeat.
 
-  - install-elk.yml
+
+#### install-elk.yml
 ```
 ---
 - name: Configure Elk VM with Docker
@@ -153,7 +155,8 @@ _The playbook implements the following tasks:_
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Docker)
+#### Docker 
+![Pasted image 20240130121911](https://github.com/cyberAngel9/ELK-Stack-Project/assets/82012925/0e8b4e9d-76d2-459a-9fe5-4999600bb688)
 
 
 ### Target Machines & Beats
@@ -216,12 +219,13 @@ for host in "${REMOTE_HOSTS[@]}"; do
 done
 ``` 
 
-![TODO: Update the path with the name of your diagram](Images/Pasted image 20240205113820.png)
+
+![Pasted image 20240205113820](https://github.com/cyberAngel9/ELK-Stack-Project/assets/82012925/06151c49-365c-4855-b0dc-74137869d61c)
 
 
-Accessing Kibana and navigating to the logs section allows us to view the recently attempted failed logins made by the script.
+- Accessing Kibana and navigating to the logs section allows us to view the recently attempted failed logins made by the script.
 
-![TODO: Update the path with the name of your diagram](Images/Pasted image 20240205114136.png)
+![Pasted image 20240205114136](https://github.com/cyberAngel9/ELK-Stack-Project/assets/82012925/3ce90503-b3e5-4ada-83a8-f8865e3a6ca7)
 
 
 ### Linux Stress
@@ -255,21 +259,18 @@ done
 wait
 ```
 
-![TODO: Update the path with the name of your diagram](Images/Pasted image 20240205121636.png)
+![Pasted image 20240205121636](https://github.com/cyberAngel9/ELK-Stack-Project/assets/82012925/596009e4-a0dc-4e8b-94b2-3769b1222350)
 
-
-![TODO: Update the path with the name of your diagram](Images/Pasted image 20240205121803.png)
+![Pasted image 20240205121803](https://github.com/cyberAngel9/ELK-Stack-Project/assets/82012925/5098e050-157b-4e22-8fff-878006b242f6)
 
 
 
 
 - To view the results, go to the Metric page, click on one of the VMs, and select "View Metrics.
 
+![Pasted image 20240205122236](https://github.com/cyberAngel9/ELK-Stack-Project/assets/82012925/5005af4f-018f-4829-b3ce-a310b9776702)
 
-![TODO: Update the path with the name of your diagram](Images/Pasted image 20240205122343.png)
-
-
-![TODO: Update the path with the name of your diagram](Images/Pasted image 20240205122236.png)
+![Pasted image 20240205122343](https://github.com/cyberAngel9/ELK-Stack-Project/assets/82012925/8ccf3d01-39ae-46c0-b1d0-a36daa87f099)
 
 
 
@@ -278,7 +279,7 @@ wait
 
 - Generate a substantial volume of web requests to all three VM servers by using a script that performs 500 wget requests on each server and removes the index.html file.
 
- web_request.sh
+#### web_request.sh
 ```
 #!/bin/bash
 
@@ -297,13 +298,12 @@ for host in "${REMOTE_HOSTS[@]}"; do
 done
 ```
 
-
-![TODO: Update the path with the name of your diagram](Images/Pasted image 20240205123859.png)
+![Pasted image 20240205123859](https://github.com/cyberAngel9/ELK-Stack-Project/assets/82012925/2d67eee4-ff7e-4930-bff7-267e43a69ace)
 
 - To view the results, go to the Metric page, click on one of the VMs, and select "View Metrics.
 
 - High traffic in both load and networking.
-![TODO: Update the path with the name of your diagram](Images/Pasted image 20240205124705.png)
+![Pasted image 20240205124705](https://github.com/cyberAngel9/ELK-Stack-Project/assets/82012925/b590db0d-54dc-4500-949c-464cbebaa89e)
 
-![TODO: Update the path with the name of your diagram](Images/Pasted image 20240205124759.png)
+![Pasted image 20240205124759](https://github.com/cyberAngel9/ELK-Stack-Project/assets/82012925/81983251-b722-4ebd-a203-eacb77850f71)
 
