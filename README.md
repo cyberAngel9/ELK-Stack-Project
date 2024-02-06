@@ -193,7 +193,7 @@ _SSH into the control node and follow the steps below:_
 	- I successfully added "elk" in brackets at the end of the hosts file with the private IP of the VM I wanted to include in the Elk group. 
 	- To install Filebeat, I needed to download the **filebeat-config.yml** file and modify the IP address within that configuration file.
 
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- _Which URL do you navigate to in order to check that the ELK server is running?_
 	- The URL is `http://20.245.79.240:5601/app/kibana`
 
 ### Generating Logs
